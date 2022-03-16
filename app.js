@@ -35,12 +35,16 @@ const materialIconStyle = document.querySelectorAll(".material-icons");
 const buttonNext = document.querySelector("#new-quote");
 const selectText = document.querySelector("#text");
 const selectAuthor = document.querySelector("#author");
-let range = quotesAuthor.length;
+
 
 const getRandomNumber = () => {
   return Math.floor(Math.random() * 256);
 };
 
+// Gets the max length of the array and stores it as a max range
+let range = quotesAuthor.length;
+
+// sets index to a random interget between 0 and the range(length of the quotesQuthor array)
 const getRandomQuote = () => {
   let index = Math.floor(Math.random() * range); 
   q = quotesAuthor[index].quote;
