@@ -35,16 +35,16 @@ const materialIconStyle = document.querySelectorAll(".material-icons");
 const buttonNext = document.querySelector("#new-quote");
 const selectText = document.querySelector("#text");
 const selectAuthor = document.querySelector("#author");
-let x = 0;
+let range = quotesAuthor.length;
 
 const getRandomNumber = () => {
   return Math.floor(Math.random() * 256);
 };
 
 const getRandomQuote = () => {
-  q = quotesAuthor[x].quote;
-  a = quotesAuthor[x].author;
-  x++;
+  let index = Math.floor(Math.random() * range); 
+  q = quotesAuthor[index].quote;
+  a = quotesAuthor[index].author;
   return [q, a];
 };
 
